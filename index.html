@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <!-- Main CSS-->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/estilo.css">
+  <!-- Font-icon css-->
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+</head>
+
+<body class="app sidebar-mini">
+  <!-- Navbar-->
+  <header class="app-header"><a class="app-header__logo"><img src="images/logo blanco.png" width="70px" height="30px"
+        alt="siguelo"></a>
+    <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar"
+      aria-label="Hide Sidebar"><i class="fas fa-bars"></i></a>
+    <!-- Navbar Right Menu-->
+    <ul class="app-nav">
+
+      <!--Notification Menu-->
+      <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Show notifications"><i
+            class="fa fa- -o fa-lg"></i></a>
+
+      </li>
+
+    </ul>
+  </header>
+  <!-- Sidebar menu-->
+  <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+  <aside class="app-sidebar">
+
+    <ul class="app-menu">
+      <!--li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview">
+          <i class="fas fa-chart-area"></i><span class="app-menu__label">Dashboard</span><i
+            class="treeview-indicator fa fa-angle-right"></i></a>
+        <ul class="treeview-menu">
+          <li onClick="dcltLoadTemplate()"><a class="treeview-item"><i class="icon fa fa-circle-o"></i>
+              ChekList</a></li>
+          <li onClick="dcntLoadTemplateDshCuenta()"><a class="treeview-item"><i class="icon fa fa-circle-o"></i>
+              Cuentas</a></li>
+        </ul>
+      </li-->
+      <li onclick="dshLoadCellds()"><a class="app-menu__item"><i class="app-menu__icon fa fa-chart-area"></i><span
+            class="app-menu__label">Tablero</span></a></li>
+      <li onclick="lastChekList()"><a class="app-menu__item"><i class="app-menu__icon fa fa-edit"></i><span
+            class="app-menu__label">Verificacines</span></a></li>
+      <li onclick="cntlastCuenta()"><a class="app-menu__item"><i class="fas fa-money-bill-wave mr-2"></i><span
+            class="app-menu__label"> Registros</span></a></li>
+      <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i
+            class="app-menu__icon fa fa-cogs"></i><span class="app-menu__label">Configuraciones</span><i
+            class="treeview-indicator fa fa-angle-right"></i></a>
+        <ul class="treeview-menu">
+          <!--li onClick="cltLoadTemplateCheklist('Basico')"><a class="treeview-item"><i class="icon fa fa-circle-o"></i>
+              Basico</a></li-->
+          <!--li onClick="cltLoadTemplateCheklist('Completo')"><a class="treeview-item"><i class="icon fa fa-circle-o"></i>
+              Completo</a></li-->
+          <li onClick="cltLoadTemplateAllChekList()"><a class="treeview-item"><i class="icon fa fa-circle-o"></i>
+              Configrurar Item</a></li>
+          <li onClick="cltLoadFormForAddItemTemplate()"><a class="treeview-item"><i class="icon fa fa-circle-o"></i>
+              Agregar item</a></li>
+        </ul>
+      </li>
+      <!--li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i
+            class="app-menu__icon fa fa-laptop"></i><span class="app-menu__label">Cuentas</span><i
+            class="treeview-indicator fa fa-angle-right"></i></a>
+        <ul class="treeview-menu">
+          <li onClick="cntLoadTemplateCuenta('Egreso')"><a class="treeview-item"><i class="icon fa fa-circle-o"></i>
+              Egresos</a></li>
+          <li onClick="cntLoadTemplateCuenta('Ingreso')"><a class="treeview-item"><i class="icon fa fa-circle-o"></i>
+              Ingresos</a></li>
+        </ul>
+      </li-->
+
+    </ul>
+  </aside>
+
+  <main class="app-content">
+    <div id="root">
+
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-titulo">titulo</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="modal-body">
+
+          </div>
+          <div class="modal-footer" id="modal-footer">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <script src="js/librerias/jquery-3.3.1.min.js"></script>
+  <script src="js/librerias/popper.min.js"></script>
+  <script src="js/librerias/bootstrap.min.js"></script>
+  <script src="js/librerias/main.js"></script>
+  <script type="text/javascript" src="js/librerias/plugins/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="js/librerias/plugins/dataTables.bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/librerias/plugins/chart.js"></script>
+
+  <script src="js/script.js"></script>
+
+  <script src="js/ChekList.js"></script>
+  <script src="js/cuentas.js"></script>
+  <script src="js/registros.js"></script>
+
+  <script src="js/dsh/dsh.js"></script>
+  <script src="js/dsh/dshGastos.js"></script>
+  <script src="js/dsh/dshGestionByMovil.js"></script>
+
+  <!--script src="js/dashboard/clt.js"></script-->
+  <!--script src="js/dashboard/cnt.js"></script-->
+
+
+
+
+
+</body>
+
+</html>

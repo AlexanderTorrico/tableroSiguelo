@@ -1,0 +1,60 @@
+body{
+	color: #333;
+}
+p {
+	font-family: 'Poppins', sans-serif !important;
+	font-size: 1.1em !important;
+	font-weight: 300;
+	line-height: 1.7em;
+	color: #999;
+}
+
+.text-traccar{
+	padding: 5px !important;
+	border-radius: 0px 0px 0px 0px !important;
+	font: 400 12px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+	color: #606060;
+}
+
+.float{
+	position:fixed;
+	width:50px;
+	height:50px;
+	bottom:40px;
+	right:40px;
+	background-color:rgb(0,170,177);
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+	margin-top:17px;
+}
+
+.clt_col_fecha{
+	padding: 6px !important;
+}
+
+.content-flex{
+  width: 100%;
+  justify-content: center !important;
+}
+.subContent-flex{
+  width: 95%;
+  display: flex !important;
+  justify-content: space-between !important;
+  margin: auto;
+  align-items: center !important;
+}
+
+
+@media (max-width: 1000px) {
+  .clt_col_fecha{
+    display:none;
+  }
+  .clt_col_n{
+    display:none;
+  }
+}

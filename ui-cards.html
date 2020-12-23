@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="description"
+    content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
+  <!-- Twitter meta-->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:site" content="@pratikborsadiya">
+  <meta property="twitter:creator" content="@pratikborsadiya">
+  <!-- Open Graph Meta-->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Vali Admin">
+  <meta property="og:title" content="Vali - Free Bootstrap 4 admin theme">
+  <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin">
+  <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
+  <meta property="og:description"
+    content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
+  <title>Cards - Vali Admin</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Main CSS-->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <!-- Font-icon css-->
+  <link rel="stylesheet" type="text/css"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <main class="app-content">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="tile">
+          <div class="tile-title-w-btn">
+            <h3 class="title">Dropzone</h3>
+            <p><a class="btn btn-primary icon-btn" href="https://gitlab.com/meno/dropzone" target="_blank"><i
+                  class="fa fa-file"></i>Docs</a></p>
+          </div>
+          <div class="tile-body">
+            <p>This plugin can be used to let the user Drag and Drop files for upload in a easy way.</p>
+            <h4>Demo</h4>
+            <form id="myForm" class="text-center dropzone" method="POST" enctype="multipart/form-data"
+              action="../api/file/test">
+
+              <input id="img" type="file" />
+              <button id="save" type="submit">Guardar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <form action="http://www.example.com/" method="POST" enctype="multipart/form-data">
+        <input type="text" name="fileid" />
+        <br />
+        <input type="text" name="description" />
+        <br />
+        <input type="file" name="thefile" />
+        <br />
+        <input type="submit" name="submit" value="submit" />
+      </form>
+    </div>
+  </main>
+
+  <script type="text/javascript" src="js/librerias/plugins/dropzone.js"></script>
+
+  <script>
+
+    window.onload = function () {
+      $('#save').ajaxSubmit({
+        headers: {
+          "Content-type": "application/json",
+          "Accept": "application/json"
+        }
+      });
+    };
+  </script>
+</body>
+
+</html>
